@@ -8,5 +8,5 @@ function getLocation() {
 
 function showPosition(position) {
     alert("Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude)
+    " Longitude: " + position.coords.longitude)
 }
