@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geolocation</title>
+    <style>
+        #info {
+            font-size: 14px;
+            padding: 5px;
+            margin-top: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        button
+        {
+            width: 100px;
+            height: auto;
+            background-color: rgb(255, 0, 119);
+            border: none;
+            padding: 5px;
+            color: wheat;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>
+            geolocate
+        </h1>
+    </center>
+    <div id="info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic nihil temporibus molestias. Recusandae quidem maxime sed, et vitae nemo animi dolorem quasi eaque eligendi, exercitationem, vel natus dignissimos sit sunt.</div>
+    <button onclick="getLocation()">Try It</button>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                document.getElementById("info").innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById("info").innerHTML = "Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</body>
+</html>
