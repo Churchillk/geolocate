@@ -7,6 +7,6 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    document.getElementById("info").innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
+    alert("Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude)
 }
