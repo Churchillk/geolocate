@@ -28,21 +28,7 @@
         </h1>
     </center>
     <div id="info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic nihil temporibus molestias. Recusandae quidem maxime sed, et vitae nemo animi dolorem quasi eaque eligendi, exercitationem, vel natus dignissimos sit sunt.</div>
-    <button onclick="getLocation()">Try It</button>
-
-    <script>
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                document.getElementById("info").innerHTML = "Geolocation is not supported by this browser.";
-            }
-        }
-
-        function showPosition(position) {
-            document.getElementById("info").innerHTML = "Latitude: " + position.coords.latitude + 
-            "<br>Longitude: " + position.coords.longitude;
-        }
-    </script>
+    <button onclick="getLocation()">locate</button>
+    <script src="back.js"></script>
 </body>
 </html>
